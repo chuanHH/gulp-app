@@ -1,0 +1,12 @@
+@baseFontSize:37.5;
+.px2rem(@name, @px){
+    @{name}: @px / @baseFontSize * 1rem;
+}
+#div1{
+ .px2rem(font-size, 24)
+}
+p{
+  &.p-text{
+    .px2rem(font-size, 32)
+  }  
+}
