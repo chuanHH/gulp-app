@@ -1,12 +1,258 @@
 @baseFontSize:37.5;
+@mainColor: #02BD9E;
 .px2rem(@name, @px){
     @{name}: @px / @baseFontSize * 1rem;
 }
-#div1{
- .px2rem(font-size, 24)
-}
-p{
-  &.p-text{
-    .px2rem(font-size, 32)
-  }  
+html{background: #F5F6FA}
+body{margin: 0}
+.share-container{
+  p{
+    margin: 0;
+  }
+  .bgCommond{
+    .px2rem(padding, 12);
+    background: white;
+    .hot{
+      .px2rem(height, 46);
+      .px2rem(line-height, 46);
+      .px2rem(font-size, 14);
+      color: #4B5564;
+      .hot-flag{
+        .px2rem(padding-left, 4);
+        border-left: 2 / @baseFontSize * 1rem solid @mainColor;
+      }
+    }
+  }
+  .mgCommond{
+    .px2rem(margin-bottom, 10);
+    .land-lord{
+      position: relative;
+      .px2rem(margin-top, 20);
+      .px2rem(margin-bottom, 20);
+      .head-img{
+        .px2rem(width, 34);
+        .px2rem(height, 34);
+        border-radius: 50%;
+        background: pink;
+        position: absolute;
+      }
+      .info{
+        .px2rem(margin-left, 46);
+      }
+      .ept{
+        .px2rem(margin-top, 14);
+        .px2rem(margin-bottom, 14);
+        .px2rem(padding, 14);
+        .px2rem(border-radius, 4);
+      }
+      .in{
+        .title-color{
+          color: @mainColor!important;
+        }
+        .share-title{
+          font-weight: bold;
+          color: #3F414A;
+          .px2rem(font-size, 14);
+          span{
+            font-weight: normal;
+            display: inline-block;
+            .px2rem(width, 34);
+            .px2rem(height, 14);
+            .px2rem(line-height, 14);
+            .px2rem(font-size, 12);
+            .px2rem(margin-left, 10);
+            color: white;
+            text-align: center;
+            background: @mainColor;
+            .px2rem(border-radius, 4);
+          }
+        }
+        .share-time{
+          .px2rem(font-size, 12);
+          color: #9B9B9B;
+        }
+        .words{
+          .px2rem(font-size, 16);
+          .px2rem(line-height, 28);
+          color: #3F414A;
+        }
+      }
+    }
+  }
+  .head{
+    .p-text{
+      font-weight: bold;
+      .px2rem(font-size, 24);
+      color: #3F414A;
+      text-align: justify;
+      .px2rem(line-height, 48);
+    }
+    .recommend{
+      .px2rem(font-size, 12);
+      .px2rem(margin-top, 10);
+      color: #9BA0AA;
+      span{
+        display: inline-block;
+        height: inherit;
+        line-height: inherit;
+        img{
+          transform: scale(0.5 / @baseFontSize * 1rem);
+        }
+        em{
+          //vertical-align: super;
+        }
+      }
+      .from{
+        float:right;
+        .sleep-week{
+          color:@mainColor;
+        }
+      }
+    }
+  }
+  .maxStyle{
+    .px2rem(max-height, 852);
+  }
+  .read-body{
+    position: relative;
+     overflow: hidden;
+    .share-img{
+      display: inline-block;
+      width: 100%;
+      .px2rem(height, 180);
+      background: pink;
+    }
+    .share-content{
+      .px2rem(padding-top, 20);
+      .px2rem(padding-bottom, 20);
+      .px2rem(line-height, 28);
+      .px2rem(font-size, 18);
+      color: #3F414A;
+    }
+    .read-more{
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      img{
+        transform: scale(0.5);
+        //vertical-align: text-top;
+      }
+      width: 100%;
+      .px2rem(height, 50);
+      .px2rem(line-height, 50);
+      .px2rem(font-size, 16);
+      color: #02BD9E;
+      background-image: linear-gradient(-180deg, rgba(255,255,255,0.00) 0%, #FFFFFF 50%);
+    }
+  }
+  .hot-comments{
+    .no-datas{
+      text-align: center;
+      .px2rem(margin-top, 20);
+      img{
+        transform: scale(0.5 / @baseFontSize * 1rem);
+      }
+      .not{
+        .px2rem(font-size, 14);
+        .px2rem(margin-bottom, 20);
+        color: #9BA0AA;
+      }
+    }
+    .down-btn{
+      text-align: center;
+      button{
+        .px2rem(width, 315);
+        .px2rem(height, 42);
+        .px2rem(line-height, 42);
+        .px2rem(border-radius, 100);
+        .px2rem(font-size, 16);
+        .px2rem(margin-bottom, 30);
+        color: white;
+        border: none;
+        background: @mainColor;
+      }
+    }
+  }
+  .relevant{
+    .original{
+      border-bottom:0.5 / @baseFontSize * 1rem solid  #E8E9EB;
+      .px2rem(padding-top, 20);
+      .px2rem(padding-bottom, 20);
+      position: relative;
+      .org-img{
+        display: inline-block;
+        position: absolute;
+        .px2rem(width, 110);
+        .px2rem(height, 90);
+        background: pink;
+      }
+      .org-mg{.px2rem(margin-left, 122);}
+      .org-title {
+        display: inline-block;
+        .px2rem(font-size, 18);
+        .px2rem(line-height, 32);
+        color: #40414A;
+        .title {
+          font-weight: bold;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical
+        }
+        .from-rc{
+          float: right;
+          .px2rem(font-size, 14);
+          color: #020000;
+          span{
+            color: @mainColor;
+          }
+        }
+        .text{
+          .px2rem(font-size, 14);
+          clear: both;
+          color: #9BA0AA;
+        }
+      }
+    }
+  }
+  .forum{
+    .px2rem(padding, 12);
+    .logo{
+      display: inline-block;
+      img{
+        .px2rem(margin-left, 12);
+        .px2rem(margin-right, 16);
+        transform: scale(0.5 / @baseFontSize * 1rem);
+      }
+    }
+    .zc{
+      display: inline-block;
+      p:first-child{
+        .px2rem(font-size, 20);
+        color: #3C3C3C;
+      }
+      p:last-child{
+        .px2rem(font-size, 12);
+        .px2rem(margin-top, 6);
+        color: #868686;
+      }
+    }
+    .btn{
+      float: right;
+      display: inline-block;
+      vertical-align: middle;
+      .down-app{
+        .px2rem(width, 90);
+        .px2rem(height, 34);
+        .px2rem(line-height, 34);
+        .px2rem(font-size, 14);
+        .px2rem(border-radius, 100);
+        text-align: center;
+        color: #FFFFFF;
+        border: none;
+        background: @mainColor;
+      }
+    }
+  }
 }
